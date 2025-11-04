@@ -271,5 +271,10 @@
   
   .w-100 { width: 100%; }
   .maxw-65ch { max-width: 65ch; }
+
+  li {
+  display: inline; 
+  padding: 10px; 
+}
 }
 
