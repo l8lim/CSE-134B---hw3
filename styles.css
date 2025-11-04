@@ -102,6 +102,7 @@
     background: color-mix(in oklab, var(--surface, #171a2f) 85%, black);
     border-bottom: 1px solid color-mix(in oklab, var(--accent, #7aa2ff) 20%, transparent);
     backdrop-filter: blur(8px) saturate(1.1);
+    padding: 5rm;
   }
   .navbar {
     max-width: min(70rem, 92%);
