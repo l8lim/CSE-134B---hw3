@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Experiments</title>
+ <link rel="stylesheet" href="styles.css">
+
+</head>
+<body>
+  <header>
+    <h1>Experiments</h1>
+    <!-- RWD: interface change – hamburger control (CSS-only) -->
+<input type="checkbox" id="nav-toggle" aria-label="Toggle navigation">
+<label class="nav-toggle" for="nav-toggle"><span></span></label>
+    <nav>
+      <a href="index.html">About</a> ·
+      <a href="projects.html">Projects</a> ·
+      <a href="resume.html">Resume</a> ·
+      <a href="contact.html">Contact</a>
+    </nav>
+  </header>
+
+  <main>
+    <!-- TEMPLATE -->
+    <section>
+      <h2>&lt;template&gt;</h2>
+      <p>The content inside this template is in the DOM but not rendered (no JS used).</p>
+      <template id="demo-template">
+        <article>
+          <h3>Hidden Card</h3>
+          <p>This lives inside the template and stays inert.</p>
+        </article>
+      </template>
+      <p><em>Visible comparison:</em></p>
+      <article>
+        <h3>Visible Card</h3>
+        <p>This appears to contrast with the hidden template content above.</p>
+      </article>
+    </section>
+
+    <hr />
+
+    <!-- PICTURE + SOURCE (uses your JPGs) -->
+    <section>
+      <h2>&lt;picture&gt; with &lt;source&gt;</h2>
+      <p>Switches image based on viewport width.</p>
+      <picture>
+        <source srcset="me_large.jpg" media="(min-width: 800px)" type="image/jpeg" />
+        <source srcset="me_small.jpg" media="(max-width: 799px)" type="image/jpeg" />
+        <img src="me_small.jpg" alt="Portrait" width="320" height="320" />
+      </picture>
+    </section>
+
+    <hr />
+
+    <!-- AUDIO + SOURCE (uses your MP3) -->
+    <section>
+      <h2>&lt;audio&gt; with &lt;source&gt;</h2>
+      <audio controls preload="metadata">
+        <source src="sound.mp3" type="audio/mpeg" />
+        Your browser does not support the audio element. <a href="sound.mp3">Download the MP3</a>.
+      </audio>
+    </section>
+
+    <hr />
+
+    <!-- VIDEO + SOURCE (uses your MP4 with spaces in name) -->
+    <section>
+      <h2>&lt;video&gt; with &lt;source&gt;</h2>
+      <p>If the poster image is missing, the first video frame will show.</p>
+      <video controls preload="metadata" width="640" height="360" poster="smiley.jpg">
+        <!-- URL-encode spaces and & in the filename -->
+        <source src="Bridge%20Showcase%20%26%20Awards%20event.mp4" type="video/mp4" />
+        Your browser does not support HTML5 video. 
+        <a href="Bridge%20Showcase%20%26%20Awards%20event.mp4">Download the MP4</a>.
+      </video>
+    </section>
+
+    <hr />
+
+    <!-- CANVAS (with border + fallback text) -->
+    <section>
+      <h2>&lt;canvas&gt;</h2>
+      <canvas id="demoCanvas" width="320" height="180" style="border:1px solid #000;">
+        Your browser does not support HTML5 canvas.
+      </canvas>
+      <p>(No JS drawing used; the element is present for structure and fallback.)</p>
+    </section>
+  </main>
+
+  <footer>
+    <p>Open this page at <code>/experiments.html</code> on your Netlify site.</p>
+  </footer>
+</body>
+</html>
